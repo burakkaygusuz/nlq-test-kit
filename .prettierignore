@@ -1,0 +1,9 @@
+# Ignore artifacts:
+node_modules/
+.git/
+.vscode/
+.husky/
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.gitignore
