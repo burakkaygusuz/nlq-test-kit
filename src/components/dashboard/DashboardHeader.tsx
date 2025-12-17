@@ -1,6 +1,7 @@
 import { Button } from '@heroui/react';
 import { motion } from 'framer-motion';
-import { Play, Zap } from 'lucide-react';
+import { Play } from 'lucide-react';
+import Image from 'next/image';
 
 interface DashboardHeaderProps {
   totalTests: number;
@@ -25,8 +26,14 @@ export function DashboardHeader({
     <header className="sticky top-0 z-50 border-b border-gray-800 bg-black/50 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6">
         <div className="flex items-center gap-3">
-          <div className="rounded-lg border border-blue-500/30 bg-blue-600/20 p-2">
-            <Zap className="h-5 w-5 text-blue-400" />
+          <div className="relative h-10 w-10">
+            <Image
+              src="/logo.png"
+              alt="NLQ Test Kit Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
           <div>
             <h1 className="text-lg font-bold tracking-tight text-white">NLQ Test Kit</h1>
